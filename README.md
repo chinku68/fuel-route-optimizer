@@ -26,10 +26,16 @@ Prepared database snapshot exported on **7 October 2026**:
 
 - **8,151 station records**, matching the supplied CSV row count.
 - **7,531 USA records**, including states and Washington, DC.
-- **244 USA records with matched station locations** (`venue`/`address`).
-- **7,272 USA records with approximate city locations** (`city`).
+- **270 USA records with matched station locations** (`venue`/`address`).
+- **7,246 USA records with approximate city locations** (`city`).
 - **15 USA records with unverified locations** (`unverified`).
 - **620 non-USA records**, retained in the database and excluded from route planning.
+
+OSM preparation has completed for all **48 USA state areas represented in
+the current station database**. Complete extracts are available locally and shared
+in the repository. The full run added **235** matched records, bringing USA matched
+locations to **270**; **7,261** USA locations remain approximate or unverified.
+Completion of downloads does not establish complete station accuracy.
 
 These counts describe the prepared snapshot in `data/prepared.sqlite3`, exported
 on 7 October 2026. The repository includes this snapshot and complete downloaded
