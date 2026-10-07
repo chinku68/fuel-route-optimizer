@@ -16,4 +16,9 @@ class FuelStationSerializer(serializers.ModelSerializer):
             "retail_price",
             "latitude",
             "longitude",
+            "coordinate_quality",
+            "coordinate_source",
+            "geocode_confidence",
+            "geocode_checked_at",
+            "geocode_error",
         ]

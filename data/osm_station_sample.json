@@ -1,0 +1,715 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-07T08:28:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 914190265,
+      "lat": 32.9440135,
+      "lon": -112.733305,
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "820",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "West Pima Street",
+        "amenity": "fuel",
+        "brand": "Love's",
+        "brand:wikidata": "Q1872496",
+        "hgv": "no",
+        "name": "Love's",
+        "self_service": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 993718581,
+      "lat": 43.9609082,
+      "lon": -90.3772365,
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Love's",
+        "brand:wikidata": "Q1872496",
+        "hgv": "yes",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/345"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2181585604,
+      "lat": 32.9446142,
+      "lon": -112.727767,
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "621",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "West Pima Street",
+        "amenity": "fuel",
+        "brand": "Chevron",
+        "brand:wikidata": "Q319642",
+        "name": "Chevron",
+        "self_service": "yes",
+        "source": "esri/USA_NAD_Addresses"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2181622594,
+      "lat": 32.9461616,
+      "lon": -112.7244739,
+      "tags": {
+        "amenity": "fuel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3844170972,
+      "lat": 44.1307307,
+      "lon": -90.5001179,
+      "tags": {
+        "amenity": "fuel",
+        "name": "Warrens Mall"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5742533670,
+      "lat": 43.9908212,
+      "lon": -90.5043865,
+      "tags": {
+        "addr:city": "Tomah",
+        "addr:housenumber": "313",
+        "addr:postcode": "54660",
+        "addr:state": "WI",
+        "addr:street": "North Superior Avenue",
+        "amenity": "fuel",
+        "brand": "Casey's General Store",
+        "brand:wikidata": "Q2940968",
+        "name": "Casey's General Store",
+        "ref": "1933",
+        "self_service": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5742533676,
+      "lat": 44.0174357,
+      "lon": -90.5015125,
+      "tags": {
+        "amenity": "fuel",
+        "brand": "BP",
+        "brand:wikidata": "Q152057",
+        "name": "BP"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5742533679,
+      "lat": 44.0195569,
+      "lon": -90.4938931,
+      "tags": {
+        "addr:city": "Tomah",
+        "addr:housenumber": "907",
+        "addr:postcode": "54660",
+        "addr:state": "WI",
+        "addr:street": "East McCoy Boulevard",
+        "amenity": "fuel",
+        "brand": "Shell",
+        "brand:wikidata": "Q110716465",
+        "name": "Shell",
+        "self_service": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7069181661,
+      "lat": 43.9588691,
+      "lon": -90.5060832,
+      "tags": {
+        "addr:city": "Tomah",
+        "addr:housenumber": "24432",
+        "addr:postcode": "54660",
+        "addr:state": "WI",
+        "addr:street": "Gopher Avenue",
+        "amenity": "fuel",
+        "brand": "Mobil",
+        "brand:wikidata": "Q3088656",
+        "name": "Mobil"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7298108030,
+      "lat": 43.9640977,
+      "lon": -90.3756609,
+      "tags": {
+        "amenity": "fuel",
+        "hgv": "no"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7304806831,
+      "lat": 43.9720209,
+      "lon": -90.5074081,
+      "tags": {
+        "amenity": "fuel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7304806833,
+      "lat": 43.9725227,
+      "lon": -90.5041962,
+      "tags": {
+        "addr:city": "Tomah",
+        "addr:housenumber": "1504",
+        "addr:postcode": "54660",
+        "addr:state": "WI",
+        "addr:street": "Superior Avenue",
+        "amenity": "fuel",
+        "brand": "Kwik Trip",
+        "brand:wikidata": "Q6450420",
+        "name": "Kwik Trip",
+        "ref": "718",
+        "website": "https://www.kwiktrip.com/locator/store?id=718"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7304841815,
+      "lat": 43.9728318,
+      "lon": -90.4903781,
+      "tags": {
+        "amenity": "fuel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7684142280,
+      "lat": 44.0297338,
+      "lon": -90.4359317,
+      "tags": {
+        "amenity": "fuel",
+        "name": "Whitetail Crossing",
+        "operator": "Ho-Chunk Nation"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7690996082,
+      "lat": 32.9445558,
+      "lon": -112.7310682,
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "710",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "West Pima Street",
+        "amenity": "fuel",
+        "brand": "Circle K",
+        "brand:wikidata": "Q3268010",
+        "compressed_air": "yes",
+        "name": "Circle K",
+        "self_service": "yes",
+        "source": "esri/USA_NAD_Addresses"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9233468316,
+      "lat": 44.0155084,
+      "lon": -90.6838776,
+      "tags": {
+        "amenity": "fuel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11331978901,
+      "lat": 36.5394912,
+      "lon": -95.2241909,
+      "tags": {
+        "amenity": "fuel"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11687461335,
+      "lat": 43.9612138,
+      "lon": -90.3783122,
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Love's",
+        "brand:wikidata": "Q1872496",
+        "hgv": "yes",
+        "name": "Love's",
+        "website": "https://www.loves.com/locations/345"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12099611220,
+      "lat": 32.9303272,
+      "lon": -112.6733351,
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "South Butterfield Trail",
+        "alt_name": "Pilot Travel Centers",
+        "amenity": "fuel",
+        "brand": "Pilot",
+        "brand:wikidata": "Q64128179",
+        "hgv": "yes",
+        "name": "Pilot"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12141610844,
+      "lat": 43.9639891,
+      "lon": -90.3751364,
+      "tags": {
+        "amenity": "fuel",
+        "hgv": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12256378308,
+      "lat": 32.9445914,
+      "lon": -112.7333119,
+      "tags": {
+        "amenity": "fuel",
+        "hgv": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13295753723,
+      "lat": 32.9497732,
+      "lon": -112.706036,
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "942",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "East Pima Street",
+        "amenity": "fuel",
+        "brand": "One 9 Fuel Network",
+        "name": "One 9 Fuel Stop"
+      }
+    },
+    {
+      "type": "way",
+      "id": 207913719,
+      "center": {
+        "lat": 32.9446153,
+        "lon": -112.7277976
+      },
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "623",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "West Pima Street",
+        "amenity": "fuel",
+        "brand": "Chevron",
+        "brand:wikidata": "Q319642",
+        "building": "roof",
+        "name": "Chevron"
+      }
+    },
+    {
+      "type": "way",
+      "id": 207916445,
+      "center": {
+        "lat": 32.9496345,
+        "lon": -112.7056117
+      },
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "942",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "East Pima Street",
+        "amenity": "fuel",
+        "brand": "Shell",
+        "brand:wikidata": "Q110716465",
+        "building": "yes",
+        "layer": "1",
+        "name": "Shell",
+        "self_service": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 249491478,
+      "center": {
+        "lat": 32.9297546,
+        "lon": -112.6731504
+      },
+      "tags": {
+        "addr:city": "Gila Bend",
+        "addr:housenumber": "3006",
+        "addr:postcode": "85337",
+        "addr:state": "AZ",
+        "addr:street": "South Butterfield Trail",
+        "amenity": "fuel",
+        "brand": "Shell",
+        "brand:wikidata": "Q110716465",
+        "building": "yes",
+        "name": "Holt's Shell",
+        "phone": "+1 928 683 2449",
+        "source": "bing;survey"
+      }
+    },
+    {
+      "type": "way",
+      "id": 339703162,
+      "center": {
+        "lat": 36.4364573,
+        "lon": -95.2722455
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Phillips 66",
+        "brand:wikidata": "Q1656230",
+        "building": "roof",
+        "name": "Phillips 66",
+        "operator": "Casey Marketing #3429"
+      }
+    },
+    {
+      "type": "way",
+      "id": 362836218,
+      "center": {
+        "lat": 43.9218824,
+        "lon": -90.2654357
+      },
+      "tags": {
+        "addr:city": "Camp Douglas",
+        "addr:housenumber": "200",
+        "addr:postcode": "54618",
+        "addr:state": "WI",
+        "addr:street": "US Highway 12",
+        "amenity": "fuel",
+        "brand": "Arco",
+        "brand:wikidata": "Q304769",
+        "building": "roof",
+        "fuel:diesel": "yes",
+        "fuel:octane_98": "yes",
+        "name": "Arco",
+        "phone": "+1-608-427-3115",
+        "self_service": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389735605,
+      "center": {
+        "lat": 36.565598,
+        "lon": -95.2210379
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "roof",
+        "layer": "1",
+        "name": "The Wood Shed"
+      }
+    },
+    {
+      "type": "way",
+      "id": 389735609,
+      "center": {
+        "lat": 36.566038,
+        "lon": -95.2208333
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "roof",
+        "hgv": "yes",
+        "layer": "1",
+        "name": "The Wood Shed"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516225999,
+      "center": {
+        "lat": 36.6241002,
+        "lon": -95.1484391
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Maverik",
+        "brand:wikidata": "Q64149010",
+        "building": "roof",
+        "fuel:adblue": "yes",
+        "fuel:diesel": "yes",
+        "hgv": "designated",
+        "layer": "1",
+        "name": "Maverik",
+        "opening_hours": "24/7",
+        "website": "https://www.maverik.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516226001,
+      "center": {
+        "lat": 36.6237949,
+        "lon": -95.148377
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Maverik",
+        "building": "roof",
+        "fuel:diesel": "yes",
+        "fuel:e10": "yes",
+        "fuel:ethanol_free": "yes",
+        "fuel:octane_87": "yes",
+        "fuel:octane_89": "yes",
+        "fuel:octane_91": "yes",
+        "layer": "1",
+        "name": "Maverik",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516226022,
+      "center": {
+        "lat": 36.6223525,
+        "lon": -95.1474211
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Maverik",
+        "brand:wikidata": "Q64149010",
+        "building": "roof",
+        "fuel:adblue": "yes",
+        "fuel:diesel": "yes",
+        "hgv": "designated",
+        "layer": "1",
+        "name": "Maverik",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 516226023,
+      "center": {
+        "lat": 36.6226564,
+        "lon": -95.1474846
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Maverik",
+        "brand:wikidata": "Q64149010",
+        "building": "roof",
+        "fuel:diesel": "yes",
+        "fuel:e10": "yes",
+        "fuel:ethanol_free": "yes",
+        "fuel:octane_87": "yes",
+        "fuel:octane_89": "yes",
+        "fuel:octane_91": "yes",
+        "layer": "1",
+        "name": "Maverik",
+        "opening_hours": "24/7"
+      }
+    },
+    {
+      "type": "way",
+      "id": 555878447,
+      "center": {
+        "lat": 36.6346897,
+        "lon": -95.1570887
+      },
+      "tags": {
+        "addr:street": "South Wilson Street",
+        "amenity": "fuel",
+        "building": "yes",
+        "name": "Rock Out on 67",
+        "name:en": "Rock Out on 67"
+      }
+    },
+    {
+      "type": "way",
+      "id": 695293838,
+      "center": {
+        "lat": 36.6383199,
+        "lon": -95.1522997
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 702955330,
+      "center": {
+        "lat": 36.5355991,
+        "lon": -95.4281979
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "roof"
+      }
+    },
+    {
+      "type": "way",
+      "id": 702955344,
+      "center": {
+        "lat": 36.5328746,
+        "lon": -95.4305547
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Phillips 66",
+        "brand:wikidata": "Q1656230",
+        "building": "roof",
+        "name": "Phillips 66",
+        "website": "https://www.phillips66gas.com/station/P66-CHELSEA-COUNTRY-MART-0000901178/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 913545436,
+      "center": {
+        "lat": 36.4338547,
+        "lon": -95.2735657
+      },
+      "tags": {
+        "amenity": "fuel",
+        "landuse": "retail",
+        "operator": "Woodshed of Adair"
+      }
+    },
+    {
+      "type": "way",
+      "id": 913569346,
+      "center": {
+        "lat": 36.4359968,
+        "lon": -95.2715999
+      },
+      "tags": {
+        "amenity": "fuel",
+        "landuse": "retail",
+        "shop": "convenience"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1066724786,
+      "center": {
+        "lat": 44.0184763,
+        "lon": -90.506726
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Kwik Trip",
+        "brand:wikidata": "Q6450420",
+        "building": "roof",
+        "name": "Kwik Trip",
+        "website": "https://www.kwiktrip.com/locator/store?id=484"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1133954683,
+      "center": {
+        "lat": 32.9445691,
+        "lon": -112.7310672
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "roof"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1139070431,
+      "center": {
+        "lat": 36.5679889,
+        "lon": -95.2170414
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "roof",
+        "hgv": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1139070432,
+      "center": {
+        "lat": 36.5680386,
+        "lon": -95.2187131
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "roof",
+        "hgv": "no"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1204194481,
+      "center": {
+        "lat": 44.0188755,
+        "lon": -90.5025615
+      },
+      "tags": {
+        "addr:city": "Tomah",
+        "addr:housenumber": "310",
+        "addr:postcode": "54660",
+        "addr:state": "WI",
+        "addr:street": "East McCoy Boulevard",
+        "amenity": "fuel",
+        "brand": "Kwik Trip",
+        "brand:wikidata": "Q6450420",
+        "building": "roof",
+        "layer": "1",
+        "name": "Kwik Trip",
+        "ref": "796"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1204194482,
+      "center": {
+        "lat": 44.0192121,
+        "lon": -90.5019453
+      },
+      "tags": {
+        "amenity": "fuel",
+        "brand": "Kwik Trip",
+        "brand:wikidata": "Q6450420",
+        "building": "roof",
+        "fuel:diesel": "yes",
+        "name": "Kwik Trip"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1309327121,
+      "center": {
+        "lat": 44.1243412,
+        "lon": -90.5280032
+      },
+      "tags": {
+        "amenity": "fuel",
+        "building": "reef"
+      }
+    }
+  ]
+}

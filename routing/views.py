@@ -1,4 +1,7 @@
 import requests
+from django.shortcuts import render
+from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_GET
 
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -10,6 +13,21 @@ from .services import geocode_location, get_route
 from .fuel_service import find_stations_near_route
 from .fuel_optimizer import optimize_fuel_stops
 from .map_service import build_map_geojson
+
+
+@require_GET
+@ensure_csrf_cookie
+def route_map(request):
+    """Display a map using the existing route API; loading makes no routing calls."""
+    response = render(request, "routing/route_map.html", {
+        "start": request.GET.get("start", "New York, NY"),
+        "finish": request.GET.get("finish", "Dallas, TX"),
+    })
+    # OSM tiles require a Referer. Send only the page origin cross-origin,
+    # keeping location inputs in URL query parameters out of tile requests.
+    response["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    return response
+
 
 @api_view(["GET"])
 def health_check(request):
@@ -149,12 +167,23 @@ def route_preview(request):
                     "maximum_range_miles": 500,
                     "fuel_efficiency_mpg": 10,
                     "tank_capacity_gallons": 50,
+                    "starting_fuel_gallons": fuel_plan["starting_fuel_gallons"],
                 },
                 "fuel_summary": {
                     "candidate_station_count": len(candidate_stations),
                     "number_of_fuel_stops": fuel_plan["number_of_fuel_stops"],
                     "total_gallons": fuel_plan["total_gallons"],
                     "total_fuel_cost": fuel_plan["total_fuel_cost"],
+                    "total_refueling_cost": fuel_plan["total_refueling_cost"],
+                    "total_gallons_purchased": fuel_plan["total_gallons_purchased"],
+                    "initial_fuel_used_gallons": fuel_plan["initial_fuel_used_gallons"],
+                    "starting_fuel_cost_estimate": fuel_plan["starting_fuel_cost_estimate"],
+                    "ending_fuel_gallons": fuel_plan["ending_fuel_gallons"],
+                    "cost_basis": fuel_plan["cost_basis"],
+                    **(
+                        {"message": fuel_plan["message"]}
+                        if "message" in fuel_plan else {}
+                    ),
                 },
                 "starting_fuel_reference": fuel_plan["starting_fuel_reference"],
                 "fuel_stops": fuel_plan["fuel_stops"],

@@ -40,6 +40,10 @@ def build_map_geojson(
                 "state": stop["state"],
                 "price_per_gallon": stop["price_per_gallon"],
                 "route_mile": stop["route_mile"],
+                "coordinate_quality": stop.get("coordinate_quality", "unverified"),
+                "coordinate_source": stop.get("coordinate_source", ""),
+                "gallons_purchased": stop["gallons_purchased"],
+                "cost": stop["cost"],
             },
             "geometry": {
                 "type": "Point",

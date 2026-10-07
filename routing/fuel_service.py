@@ -200,6 +200,10 @@ def find_stations_near_route(
 
                     "longitude": station.longitude,
 
+                    "coordinate_quality": station.coordinate_quality,
+
+                    "coordinate_source": station.coordinate_source,
+
                     "distance_from_route_miles": round(
                         nearest_distance,
                         2
