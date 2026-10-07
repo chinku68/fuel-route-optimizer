@@ -9,4 +9,6 @@ db.sqlite3
 db.sqlite3-*
 .DS_Store
 *.log
-data/osm_cache/
+# Share complete downloads; keep temporary cache files local.
+data/osm_cache/*
+!data/osm_cache/*.json

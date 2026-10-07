@@ -22,18 +22,20 @@ Implemented:
   and cached state-by-state OSM preparation.
 - **66 automated tests passing**, verified on **7 October 2026**.
 
-Local database snapshot checked on **7 October 2026**:
+Prepared database snapshot exported on **7 October 2026**:
 
 - **8,151 station records**, matching the supplied CSV row count.
 - **7,531 USA records**, including states and Washington, DC.
-- **35 USA records with matched station locations** (`venue`).
-- **7,481 USA records with approximate city locations** (`city`).
+- **244 USA records with matched station locations** (`venue`/`address`).
+- **7,272 USA records with approximate city locations** (`city`).
 - **15 USA records with unverified locations** (`unverified`).
 - **620 non-USA records**, retained in the database and excluded from route planning.
 
-These counts describe the local database at the time of this update. They change
-as preparation continues. The database and generated OSM cache are excluded from
-Git, so a fresh checkout must rebuild its data; it does not inherit these counts.
+These counts describe the prepared snapshot in `data/prepared.sqlite3`, exported
+on 7 October 2026. The repository includes this snapshot and complete downloaded
+OSM JSON files. A fresh checkout can reuse them without repeating price import or
+completed downloads. The live `db.sqlite3` remains local; later changes to it are
+not automatically included in the shared snapshot.
 
 Remaining assessment work:
 
@@ -88,21 +90,44 @@ Use the key from your HeiGIT / OpenRouteService account. Settings load it using
 python-dotenv. Keep the real key out of Git and screenshots. Restart Django after
 changing the key. The browser does not receive this key.
 
-### 3. Prepare a new database
+### 3. Reuse the prepared database on another computer
 
-The required local inputs are `data/fuel_prices.csv` and `data/us_cities.csv`.
-Run migrations, then import prices and prepare initial city locations:
+On a **fresh checkout with no existing `db.sqlite3`**, copy the supplied snapshot:
+
+```bash
+cp data/prepared.sqlite3 db.sqlite3
+python manage.py migrate
+```
+
+On Windows Command Prompt, use `copy data\prepared.sqlite3 db.sqlite3`.
+The snapshot contains the imported prices, saved station locations, preparation
+metadata and migrations. It contains no Django users or sessions at export.
+**Skip price import and city preparation when using this snapshot.** Configure
+`.env`, then start Django as described below. Download preparation is optional
+maintenance, not a requirement each time the server starts.
+
+If you already have a local database, keep it and run migrations without copying
+over it. To continue OSM preparation, use the tracked cache files; the command
+reuses completed state downloads and only requests missing states.
+
+### Rebuild from the CSV instead
+
+As an alternative to the snapshot, start with an empty database and use
+`data/fuel_prices.csv` and `data/us_cities.csv`:
 
 ```bash
 python manage.py migrate
 python manage.py import_fuel_prices
 python manage.py add_station_coordinates
+python manage.py prepare_osm_coordinates --max-requests 0
 ```
 
+The last command imports available matches from saved OSM files without downloads.
 **Run the price import once on an empty station table.** It appends records with
-`bulk_create()` and does not deduplicate or replace existing stations. If prices
-are already imported in your local database, skip that command. Coordinate
+`bulk_create()` and does not deduplicate or replace existing stations. Coordinate
 preparation preserves existing address/station matches and original price fields.
+Rebuilding is not guaranteed to reproduce all independently geocoded locations
+or the geocoder cache contained in the snapshot.
 
 The supplied CSV has these columns and no coordinates:
 
@@ -508,14 +533,27 @@ data/
   fuel_prices.csv               Supplied prices
   us_cities.csv                 Approximate city coordinates
   osm_station_sample.json       Small example OSM extract
-  osm_cache/                    Generated local downloads, ignored by Git
+  prepared.sqlite3              Shared database snapshot for a fresh checkout
+  osm_cache/                    Complete downloaded JSON extracts shared in Git
 manage.py
 requirements.txt
+.env.example                    API-key placeholder only
 README.md
 ```
 
-`.env` and `db.sqlite3` are local runtime files excluded from Git. Larger downloaded
-OSM extracts may be present locally and are not required to start with city points.
+`.env`, the live `db.sqlite3`, virtual environments, bytecode, logs and incomplete
+OSM temporary files are excluded from Git. The prepared database snapshot and
+complete OSM JSON extracts are shared. `.env.example` contains only a placeholder.
+
+After further station preparation, refresh the shared snapshot using SQLite's
+backup command before committing it:
+
+```bash
+sqlite3 db.sqlite3 ".backup 'data/prepared.sqlite3'"
+```
+
+This requires the SQLite command-line tool. The snapshot is a copy at backup time;
+it does not update automatically while the application or preparation runs.
 
 ## Map attribution and development configuration
 
@@ -541,7 +579,7 @@ handling. The fuel plan also does not apply truck-specific road restrictions.
 - Finish or clearly document the station-accuracy and road-detour limitations.
 - Complete final live verification of fuel costs, actual range and request counts.
 - Commit and push current source, migrations, templates, static files, tests and
-  this README to the repository; keep credentials and generated local files out.
+  this README and prepared data to the repository; keep credentials and local runtime files out.
 - Provide repository access to the evaluator as required.
 - Record and share a **Loom video of no more than five minutes** showing a request
   in Postman or a similar API tool, returned fuel costs/stops, the map and a brief
